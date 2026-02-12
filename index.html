@@ -2,16 +2,178 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inmi Akoh | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
+    <header id="main-header" class="main-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">Inmi Akoh</a>
+
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+                    <li><a href="contact.html" onclick="toggleMenu()">Contact Me</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-left">
+                <p class="kicker">Hi, I’m</p>
+                <h1 class="title">Inmiogbegbile Akoh</h1>
+                <p class="subtitle">
+                    Machine Learning Data Associate II (Amazon, Cambridge) • Aston University Online BSc (Hons) Computer
+                    Science
+                </p>
+
+                <blockquote class="quote">
+                    <em>I am a Computer Science student with a foundation in Object-Oriented Programming and a growing
+                        specialisation in Internet Applications and Design. My work focuses on building structured,
+                        maintainable Java applications and developing responsive, interactive web solutions using HTML,
+                        CSS, and JavaScript. This portfolio showcases practical projects that demonstrate
+                        problem-solving, clean code principles, and secure web development practices.</em>
+                </blockquote>
+
+                <p class="meta">
+                    Aston Email:
+                    <a class="mailto" href="mailto:250435076@aston.ac.uk">250435076@aston.ac.uk</a>
+                    <br />
+                    SUN Number: <span class="sun">250435076</span>
+                </p>
+
+                <div class="cta-row">
+                    <a class="btn btn-primary" href="portfolio.html">View Portfolio</a>
+                    <a class="btn btn-secondary" href="contact.html">Start a Project</a>
+                </div>
+
+                <div class="socials">
+                    <a class="social" href="https://www.linkedin.com/in/inmi-akoh-352214318/" target="_blank"
+                        rel="noopener">
+                        <img src="./assets/linkedin.png" class="icon" alt="LinkedIn icon" />
+                        <p>LinkedIn</p>
+                    </a>
+                    <a class="social" href="https://github.com/akohinmiogbegbile" target="_blank" rel="noopener">
+                        <img src="./assets/github.png" class="icon" alt="GitHub icon" />
+                        <p>GitHub</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <img src="./assets/profile-pic.png" class="profile-pic" alt="myDP" />
+            </div>
+        </section>
+
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <ul class="list">
+                <li>
+                    <p>
+                        <strong>Aston University</strong> — Online BSc (Hons) Computer Science
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Luton Sixth Form College</strong> — BTEC Level 3 IT (Distinction* Distinction) • A-Level
+                        Business (A)
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="work-experience" class="card">
+            <h2>Work Experience</h2>
+            <ul class="list">
+                <li>
+                    <p>
+                        <strong>Amazon (Cambridge) — Machine Learning Data Associate II</strong>
+                        <br />
+                        I support AI/voice data operations and quality, working with structured processes and strong
+                        attention to detail.
+                        I focus on accuracy, consistency, and scalable workflows.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+            <p class="small">
+                Currently learning HTML, CSS, JavaScript, and Java. I’m building projects to show these skills in action
+                and I’m always looking for new challenges to grow my skillset.
+                The previous OOP module at Aston was a great introduction to Java and structured programming, and I’m
+                excited to keep building on that foundation with more projects and practice.
+            </p>
+
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="./assets/logo-html.png" class="skill-logo" alt="HTML logo" />
+                    <p><strong>HTML</strong></p>
+                    <p class="rating">★★★★☆</p>
+                </div>
+
+                <div class="skill">
+                    <img src="./assets/logo-css.png" class="skill-logo" alt="CSS logo" />
+                    <p><strong>CSS</strong></p>
+                    <p class="rating">★★★★☆</p>
+                </div>
+
+                <div class="skill">
+                    <img src="./assets/logo-js.png" class="skill-logo" alt="JavaScript logo" />
+                    <p><strong>JavaScript</strong></p>
+                    <p class="rating">★★★☆☆</p>
+                </div>
+
+                <div class="skill">
+                    <img src="./assets/logo-java.png" class="skill-logo" alt="Java logo" />
+                    <p><strong>Java</strong></p>
+                    <p class="rating">★★★☆☆</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="card">
+            <h2>Interests</h2>
+            <ul class="list">
+                <li>
+                    <p>Gym training (strength + cardio) and football</p>
+                </li>
+                <li>
+                    <p>Building small projects that show real skills (Java, web, and automation)</p>
+                </li>
+                <li>
+                    <p>Personal finance + long-term investing (structured planning mindset)</p>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <p>
+                Want to collaborate? <a href="contact.html">Contact Me</a> or email via
+                <a href="250435076@aston.ac.uk">mailto</a>.
+            </p>
+        </footer>
+    </main>
+
     <script src="script.js"></script>
 </body>
-
 
 </html>

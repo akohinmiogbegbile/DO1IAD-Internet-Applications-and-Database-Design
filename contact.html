@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inmi Akoh | Contact Me</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+    <header id="main-header" class="main-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">Inmi Akoh</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a class="active" href="contact.html">Contact Me</a></li>
+            </ul>
+
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+                    <li><a href="contact.html" onclick="toggleMenu()">Contact Me</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-head">
+            <h1 class="title">Contact Me</h1>
+            <p class="subtitle">
+                Fill the form to enquire about a project. This form does not send an email — it only validates and shows
+                a summary.
+            </p>
+        </section>
+
+        <section id="contact-me" class="card">
+            <form class="form" id="contactForm" onsubmit="return handleSubmit(event)">
+                <div class="form-row">
+                    <div class="field">
+                        <label for="firstName">First Name</label>
+                        <input id="firstName" class="input" type="text" />
+                    </div>
+
+                    <div class="field">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input id="phoneNumber" class="input" type="tel" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" class="input" type="email" />
+                    </div>
+
+                    <div class="field">
+                        <label for="confirmEmail">Confirm Email</label>
+                        <input id="confirmEmail" class="input" type="email" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="projectDescription">Project Description</label>
+                        <input id="projectDescription" class="input input-large" type="text" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label>Preferred Contact Method</label>
+                        <div class="radio-row">
+                            <label class="radio">
+                                <input id="prefEmail" type="radio" name="preferredContact" value="Email" />
+                                <span>Email</span>
+                            </label>
+                            <label class="radio">
+                                <input id="prefPhone" type="radio" name="preferredContact" value="Phone" />
+                                <span>Phone</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="projectDate">Project Date</label>
+                        <input id="projectDate" class="input" type="date" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="duration">Project Duration (e.g., 2 weeks)</label>
+                        <input id="duration" class="input" type="text" />
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <input id="submit" class="btn btn-primary" type="submit" value="Submit Enquiry" />
+                </div>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>
+                Back to <a href="index.html">Home</a> • View <a href="portfolio.html">Portfolio</a> • Email via
+                <a href="mailto:250435076@aston.ac.uk">mailto</a>
+            </p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
