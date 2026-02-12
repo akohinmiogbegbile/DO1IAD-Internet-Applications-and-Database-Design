@@ -194,6 +194,15 @@ a {
 }
 
 .profile-pic {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.profile-pic {
     width: 100%;
     max-width: 280px;
     height: auto;
@@ -276,6 +285,14 @@ a {
     padding: 12px;
     background-color: rgba(232, 234, 240, 0.03);
     text-align: left;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    background-color: rgba(232, 234, 240, 0.06);
 }
 
 .skill-logo {

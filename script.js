@@ -2,8 +2,7 @@ function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     if (!menu) return;
     menu.classList.toggle("open");
-}
-
+// This ensures that all required fields are complete before submission
 function validateForm(data) {
     // This will ensure all form fields are completed.
     const requiredKeys = [
@@ -70,7 +69,7 @@ function handleSubmit(event) {
     const preferredContactEl = document.querySelector('input[name="preferredContact"]:checked');
     const preferredContact = preferredContactEl ? preferredContactEl.value : "";
 
-    // Replace ONLY these two values with your real details:
+
     const ASTON_EMAIL = "250435076@aston.ac.uk";
 
     const data = {
@@ -106,4 +105,5 @@ function handleSubmit(event) {
     // Optionally clear the form after successful submission
     document.getElementById("contactForm").reset();
     return false;
+}
 }
