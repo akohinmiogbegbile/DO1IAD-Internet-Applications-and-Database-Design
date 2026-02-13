@@ -2,9 +2,10 @@ function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     if (!menu) return;
     menu.classList.toggle("open");
+}
+
 // This ensures that all required fields are complete before submission
 function validateForm(data) {
-    // This will ensure all form fields are completed.
     const requiredKeys = [
         "firstName",
         "projectDescription",
@@ -26,8 +27,8 @@ function validateForm(data) {
     return true;
 }
 
+// This will ensure the email and confirm email fields match.
 function checkEmails(email, confirmEmail) {
-    // This will ensure the email and confirm email fields match.
     if (email.trim() !== confirmEmail.trim()) {
         alert("Email and Confirm Email must match.");
         return false;
@@ -35,12 +36,11 @@ function checkEmails(email, confirmEmail) {
     return true;
 }
 
+// This will ensure the project date is at least one day in the future.
 function checkDate(projectDateValue) {
-    // This will ensure the project date is at least one day in the future.
     const chosen = new Date(projectDateValue);
     const now = new Date();
 
-    // Normalize to midnight for fair comparison
     chosen.setHours(0, 0, 0, 0);
     now.setHours(0, 0, 0, 0);
 
@@ -54,7 +54,6 @@ function checkDate(projectDateValue) {
     return true;
 }
 
-
 function handleSubmit(event) {
     event.preventDefault();
 
@@ -66,9 +65,10 @@ function handleSubmit(event) {
     const projectDate = document.getElementById("projectDate").value;
     const duration = document.getElementById("duration").value;
 
-    const preferredContactEl = document.querySelector('input[name="preferredContact"]:checked');
+    const preferredContactEl = document.querySelector(
+        'input[name="preferredContact"]:checked'
+    );
     const preferredContact = preferredContactEl ? preferredContactEl.value : "";
-
 
     const ASTON_EMAIL = "250435076@aston.ac.uk";
 
@@ -87,7 +87,6 @@ function handleSubmit(event) {
     if (!checkEmails(email, confirmEmail)) return false;
     if (!checkDate(projectDate)) return false;
 
-    // Pop-up summary (Note: does not send an email)
     const summary =
         "Enquiry Summary\n" +
         "-----------------------------\n" +
@@ -102,8 +101,6 @@ function handleSubmit(event) {
 
     alert(summary);
 
-    // Optionally clear the form after successful submission
     document.getElementById("contactForm").reset();
     return false;
-}
 }
