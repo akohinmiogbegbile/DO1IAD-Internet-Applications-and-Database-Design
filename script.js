@@ -1,3 +1,4 @@
+// This function toggles the visibility of the navigation menu on smaller screens.
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     if (!menu) return;
@@ -54,6 +55,7 @@ function checkDate(projectDateValue) {
     return true;
 }
 
+// This is the main function that handles form submission, validation, and summary display.
 function handleSubmit(event) {
     event.preventDefault();
 
